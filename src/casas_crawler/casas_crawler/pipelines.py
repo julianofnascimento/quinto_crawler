@@ -46,7 +46,7 @@ class CasasCrawlerPipeline:
             'near_subway',
             'sale_price',
             'construction_year',
-            'suites'
+            'suites',
         ]
         val = (
             item['link'],
@@ -66,7 +66,8 @@ class CasasCrawlerPipeline:
             item['sale_price'],
             item['construction_year'],
             item['suites'],
-            item['state']
+            item['state'],
+            item['id']
         )
         sql = "INSERT INTO imoveis_quinto_andar\
             (\
@@ -87,10 +88,11 @@ class CasasCrawlerPipeline:
                 sale_price,\
                 construction_year,\
                 suites,\
-                state\
+                state,\
+                quinto_andar_id\
             )\
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,\
-                     %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+                     %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         
         return sql, val
 

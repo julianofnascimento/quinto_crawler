@@ -27,3 +27,4 @@ class CasasCrawlerItem(Item):
     construction_year = Field()
     suites = Field()
     state = Field()
+    id = Field()

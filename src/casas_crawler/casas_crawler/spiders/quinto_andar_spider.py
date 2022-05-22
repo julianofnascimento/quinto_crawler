@@ -55,6 +55,7 @@ class QuintoAndarSpider(CrawlSpider):
         item['construction_year'] = self._find_prop(imovel_data, 'constructionYear')
         item['suites'] = self._find_prop(imovel_data, 'suites')
         item['business_context'] = self._find_prop_business_context(imovel_data)
+        item['id'] = self._find_prop(imovel_data, 'id')
 
         return item
 
