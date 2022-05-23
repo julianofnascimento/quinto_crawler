@@ -4,6 +4,7 @@ from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 from casas_crawler.items import CasasCrawlerItem
 from bs4 import BeautifulSoup as bs
+from w3lib.url import url_query_cleaner
 import json
 
 HOUSE_INFO_PATH = ['props', 'pageProps', 'initialState', 'house', 'houseInfo']

@@ -54,6 +54,12 @@ ROBOTSTXT_OBEY = True
 #    'casas_crawler.middlewares.CasasCrawlerDownloaderMiddleware': 543,
 #}
 
+SPIDER_MIDDLEWARES = {
+    'scrapy_querycleaner.QueryCleanerMiddleware': 100,
+}
+
+QUERYCLEANER_REMOVE = '.*'
+
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -68,7 +74,7 @@ ITEM_PIPELINES = {
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
