@@ -16,7 +16,7 @@ HOUSE_INFO_VALUES = ['bedrooms', 'city', 'bathrooms', 'iptu', 'area', 'rentPrice
 class QuintoAndarSpider(CrawlSpider):
     name = 'quinto_andar'
     allowed_domains = ['www.quintoandar.com.br']
-    start_urls = ['https://www.quintoandar.com.br/']
+    start_urls = ['https://www.quintoandar.com.br/imovel/893350714']
 
     rules = (
         Rule(LinkExtractor(allow=('imovel', )), callback='parse_item', follow=True),
